@@ -13,10 +13,11 @@ public class Circle extends Shape {
         this.radius = radius;
     }
     // Shape forces this class to define these two methods with the exact signiture.
-    double getArea() {
+    // Correctly calculate area dnd parimeter of a circle.
+    public double getArea() {
         return (radius * radius * Math.PI);
     }
-    double getPerimeter() {
+    public double getPerimeter() {
         return (2 * radius * Math.PI);
     }
 }
