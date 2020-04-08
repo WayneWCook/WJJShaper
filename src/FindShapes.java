@@ -14,6 +14,7 @@ public class FindShapes {
         Rhombus rhombus = new Rhombus(5, 0.5);
         Polygons pentagon = new Polygons(6,5);
         Polygons octagon = new Polygons(10,8);
+        Triangle triangle = new Triangle(6,7,4);
         System.out.println("Rectable are is: " + rec1.getArea());
         System.out.println("Square area is: "+ square.getArea());
         System.out.println("The sum can go in either direction!");
@@ -27,6 +28,8 @@ public class FindShapes {
         System.out.println("The area of the pentagon is: " + pentagon.getArea());
         System.out.println("The area of the octagon is: " + octagon.getArea());
         System.out.println("The sum of the pentagon and the octagon is: " + pentagon.addArea(octagon));
+        System.out.println("The area of the Triangle is: " + triangle.getArea());
+        System.out.println("The Triangle and Rhombus areas add to: " + triangle.addArea(rhombus));
     }
 
 }
