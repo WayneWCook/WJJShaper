@@ -15,6 +15,7 @@ public class FindShapes {
         Polygons pentagon = new Polygons(6,5);
         Polygons octagon = new Polygons(10,8);
         Triangle triangle = new Triangle(6,7,4);
+        Lemniscate lemniscate = new Lemniscate(3);
         System.out.println("Rectable are is: " + rec1.getArea());
         System.out.println("Square area is: "+ square.getArea());
         System.out.println("The sum can go in either direction!");
@@ -22,6 +23,7 @@ public class FindShapes {
         System.out.println("The sum of the square and rectangle areas is: " + square.addArea(rec1));
         System.out.println("The Circlwe area is: " + circle.getArea());
         System.out.println("The Rhombus area is: " + rhombus.getArea());
+        System.out.println("The Lemniscate's area is: " + lemniscate.getArea());
         System.out.println("The circle and retangle areas add to: " + circle.addArea(rec1));
         System.out.println("The Rhombus and Square areas add to: " + rhombus.addArea(square));
         System.out.println("The Rhombus and Cifcle areas add to: " + rhombus.addArea(circle));
@@ -30,6 +32,7 @@ public class FindShapes {
         System.out.println("The sum of the pentagon and the octagon is: " + pentagon.addArea(octagon));
         System.out.println("The area of the Triangle is: " + triangle.getArea());
         System.out.println("The Triangle and Rhombus areas add to: " + triangle.addArea(rhombus));
+        System.out.println("The Lemniscate and Rectangle's area adds to: " + lemniscate.addArea(rec1));
     }
 
 }
