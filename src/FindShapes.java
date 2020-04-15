@@ -9,12 +9,19 @@
 public class FindShapes {
     public static void main(String[] args) {
         Rectangle rec1 = new Rectangle(15,10);
+        System.out.println("There are now " + rec1.getcount() + " shape<");
         Square square = new Square(7);
+        System.out.println("There are now " + square.getcount() + " shapes<");
         Circle circle = new Circle(3);
+        System.out.println("There are now " + circle.getcount() + " shapes<");
         Rhombus rhombus = new Rhombus(5, 0.5);
+        System.out.println("There are now " + rec1.getcount() + " sjhapes<");
         Polygons pentagon = new Polygons(6,5);
+        System.out.println("There are now " + rec1.getcount() + " sjhapes<");
         Polygons octagon = new Polygons(10,8);
+        System.out.println("There are now " + rec1.getcount() + " sjhapes<");
         Triangle triangle = new Triangle(6,7,4);
+        System.out.println("There are now " + rec1.getcount() + " sjhapes<");
         Lemniscate lemniscate = new Lemniscate(3);
         System.out.println("Rectable are is: " + rec1.getArea());
         System.out.println("Square area is: "+ square.getArea());

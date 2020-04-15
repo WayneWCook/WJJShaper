@@ -7,9 +7,17 @@
 //package Shape-RCC;
 
 public abstract class Shape {
+    // Attributes - Put any needed variables here and there with any default value.
+    static int count = 0;
+    // Constructors and destruct - for creating and destroying an instance of the class, if needed.
+    // None needed for an abstract class
+    Shape() {count++;}
+
+
     // Force children to implement the following methods.
     abstract double getArea();
     abstract double getPerimeter();
+
     //Provide the following methods for each child.
     double addArea(Shape other) {
         return (this.getArea() + other.getArea());
@@ -17,4 +25,5 @@ public abstract class Shape {
     double addPerimeter(Shape other) {
         return (this.getPerimeter() + other.getPerimeter());
     }
+    int getcount() { return count;}
 }
