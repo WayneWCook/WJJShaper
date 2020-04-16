@@ -12,7 +12,8 @@ public abstract class Shape {
     // Constructors and destruct - for creating and destroying an instance of the class, if needed.
     // None needed for an abstract class
     Shape() {count++;}
-
+    // The destructor for the class. garbage collect released memory.
+    protected void finalized() {count--;}
 
     // Force children to implement the following methods.
     abstract double getArea();

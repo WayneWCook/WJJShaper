@@ -6,22 +6,25 @@
  */
 //package Shape-RCC;
 
+import javax.security.sasl.RealmCallback;
+import java.awt.*;
+
 public class FindShapes {
     public static void main(String[] args) {
         Rectangle rec1 = new Rectangle(15,10);
-        System.out.println("There are now " + rec1.getcount() + " shape<");
+        System.out.println("There are now " + rec1.getcount() + " shapes");
         Square square = new Square(7);
-        System.out.println("There are now " + square.getcount() + " shapes<");
+        System.out.println("There are now " + square.getcount() + " shapes");
         Circle circle = new Circle(3);
-        System.out.println("There are now " + circle.getcount() + " shapes<");
+        System.out.println("There are now " + circle.getcount() + " sapess");
         Rhombus rhombus = new Rhombus(5, 0.5);
-        System.out.println("There are now " + rec1.getcount() + " sjhapes<");
+        System.out.println("There are now " + rec1.getcount() + " shapess");
         Polygons pentagon = new Polygons(6,5);
-        System.out.println("There are now " + rec1.getcount() + " sjhapes<");
+        System.out.println("There are now " + rec1.getcount() + " shapess");
         Polygons octagon = new Polygons(10,8);
-        System.out.println("There are now " + rec1.getcount() + " sjhapes<");
+        System.out.println("There are now " + rec1.getcount() + " shapess");
         Triangle triangle = new Triangle(6,7,4);
-        System.out.println("There are now " + rec1.getcount() + " sjhapes<");
+        System.out.println("There are now " + rec1.getcount() + " shapess");
         Lemniscate lemniscate = new Lemniscate(3);
         System.out.println("Rectable are is: " + rec1.getArea());
         System.out.println("Square area is: "+ square.getArea());
@@ -40,6 +43,24 @@ public class FindShapes {
         System.out.println("The area of the Triangle is: " + triangle.getArea());
         System.out.println("The Triangle and Rhombus areas add to: " + triangle.addArea(rhombus));
         System.out.println("The Lemniscate and Rectangle's area adds to: " + lemniscate.addArea(rec1));
+        // Now start the process of removing the objects from heap memory.
+        System.out.println(" The end has come. There are now " + lemniscate.getcount() + " shape<");
+        square.finalized();
+        System.out.println("There are now " + lemniscate.getcount() + " shapes");
+        circle.finalized();
+        System.out.println("There are now " + lemniscate.getcount() + " shapes");
+        rec1.finalized();
+        System.out.println("There are now " + lemniscate.getcount() + " shapes");
+        pentagon.finalized();
+        System.out.println("There are now " + lemniscate.getcount() + " shapes");
+        rhombus.finalized();
+        System.out.println("There are now " + lemniscate.getcount() + " shapes");
+        octagon.finalized();
+        System.out.println("There are now " + lemniscate.getcount() + " shapes");
+        triangle.finalized();
+        System.out.println("There are now " + lemniscate.getcount() + " shapes");
+        lemniscate.finalized();
+        //System.out.println("There are now " + Shape.getcount() + " shape<");
     }
 
 }
