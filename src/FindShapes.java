@@ -3,6 +3,7 @@
  * 25 March 2020
  * Create the main class to test the rectangle, swuare, circle and shombus classes.
  * Force a commit
+ * 2010 April 14: Added constructor and destructor to Shape class to tract number of open Shape classes.
  */
 //package Shape-RCC;
 
