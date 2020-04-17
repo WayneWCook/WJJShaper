@@ -46,22 +46,36 @@ public class FindShapes {
         System.out.println("The Lemniscate and Rectangle's area adds to: " + lemniscate.addArea(rec1));
         // Now start the process of removing the objects from heap memory.
         System.out.println(" The end has come. There are now " + lemniscate.getcount() + " shape<");
-        square.finalized();
+        square.decCount();
+        square = null;                          // Allow  JAVA to garbarge collect detroyed instance.
         System.out.println("There are now " + lemniscate.getcount() + " shapes");
-        circle.finalized();
+        circle.decCount();
+        circle = null;                          // Allow  JAVA to garbarge collect detroyed instance.
         System.out.println("There are now " + lemniscate.getcount() + " shapes");
-        rec1.finalized();
+        rec1.decCount();
+        rec1 = null;                          // Allow  JAVA to garbarge collect detroyed instance.
         System.out.println("There are now " + lemniscate.getcount() + " shapes");
-        pentagon.finalized();
+        pentagon.decCount();
+        square = null;                          // Allow  JAVA to garbarge collect detroyed instance.
         System.out.println("There are now " + lemniscate.getcount() + " shapes");
-        rhombus.finalized();
+        rhombus.decCount();
+        rhombus = null;                          // Allow  JAVA to garbarge collect detroyed instance.
         System.out.println("There are now " + lemniscate.getcount() + " shapes");
-        octagon.finalized();
+        octagon.decCount();
+        octagon = null;                          // Allow  JAVA to garbarge collect detroyed instance.
         System.out.println("There are now " + lemniscate.getcount() + " shapes");
-        triangle.finalized();
+        triangle.decCount();
+        triangle = null;                          // Allow  JAVA to garbarge collect detroyed instance.
         System.out.println("There are now " + lemniscate.getcount() + " shapes");
-        lemniscate.finalized();
-        //System.out.println("There are now " + Shape.getcount() + " shape<");
+        lemniscate.decCount();
+        lemniscate = null;                          // Allow  JAVA to garbarge collect detroyed instance.
+        try {
+            System.out.println("There are now " + triangle.getcount() + " shape<");
+            triangle.decCount();
+            triangle = null;                          // Allow  JAVA to garbarge collect detroyed instance.
+        } catch (Exception e) {
+            System.out.println("Second destruction of triangle did not work. Already destroyed.");
+        }
     }
 
 }

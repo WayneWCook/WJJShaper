@@ -12,8 +12,7 @@ public abstract class Shape {
     // Constructors and destruct - for creating and destroying an instance of the class, if needed.
     // None needed for an abstract class
     Shape() {count++;}
-    // The destructor for the class. garbage collect released memory.
-    protected void finalized() {count--;}
+    // There is no real destructor in Java. .finalize() is called at some point, but not necessarily immediately.
 
     // Force children to implement the following methods.
     abstract double getArea();
@@ -27,4 +26,6 @@ public abstract class Shape {
         return (this.getPerimeter() + other.getPerimeter());
     }
     int getcount() { return count;}
+    // Allow the count to be decremated before destroying th object.
+    void decCount() {count--;}
 }
