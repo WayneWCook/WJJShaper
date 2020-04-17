@@ -3,6 +3,8 @@
  * 25 March 2020
  * This is an abstract class that forces all children to define the getArea() and getPerimeter) methods
  * It also suplies the addArea() and addPerimeter() methods that can be used by any child.
+ * 16 April 2020 - Wayne Cook
+ *      Modified this class to track the number of objects that are in use that are subclasses of Shape.
  */
 //package Shape-RCC;
 
